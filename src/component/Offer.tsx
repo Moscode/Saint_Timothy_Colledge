@@ -11,10 +11,10 @@ const Offer = () => {
     ]
   return (
     <div className="bg-primary-600 z-[999] opacity-90">
-        <div className="max-w-screen-lg mx-auto grid grid-cols-2 py-20 gap-52">
+        <div className="max-w-screen-lg mx-auto grid lg:grid-cols-2 flex-wrap py-20 lg:gap-52 gap-24">
            {
             offers.map((offer, id) => (
-            <div key={id.toString()} className="w-[80%]">
+            <div key={id.toString()} className="lg:w-[90%] w-[50%] mx-auto">
             <span className="text-primary-700 text-4xl transform -skew-x-12 flex pb-4">
                 <span className="px-2">|</span>
                 <span className="px-2">|</span>

@@ -33,7 +33,7 @@ const Review = () => {
   return (
     <div className="bg-[#ecf0f2]">
     <div className="max-w-screen-xl mx-auto flex justify-between py-28">
-        <div className="grid mb-8 border border-gray-200 rounded-lg shadow-sm md:mb-12 md:grid-cols-2 dark:bg-gray-800 gap-12">
+        <div className="grid mb-8 border border-gray-200 rounded-lg shadow-sm md:mb-12 lg:grid-cols-2 dark:bg-gray-800 gap-12 w-[50%] lg:w-[90%] mx-auto">
         {
             reviews.map((review, idx)=>(
             <figure className="w-[550px] flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-ss-lg md:border-e dark:bg-gray-800 dark:border-gray-700" key={idx.toString()}>
