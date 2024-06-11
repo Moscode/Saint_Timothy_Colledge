@@ -1,61 +1,57 @@
 const Review = () => {
+
+    const reviews = [
+        {
+            shortDescription: "Very easy way to integrate and learn more...",
+            longDescription: "If you care for your learning time, I would go with this.",
+            pic: "./review1.jpg",
+            name: "Adedoyin Seunfumi",
+            workplace: "ISL"
+        },
+        {
+            shortDescription: "Solid foundation for science subjects....",
+            longDescription: "This platform provided me with the solid understanding of the core science subjects",
+            pic: "./review2.jpg",
+            name: " David  Elvis",
+            workplace: "Command Colledge Highschool"
+        },
+        {
+            shortDescription: "Mind-blowing topics and tutorials",
+            longDescription: "I really enjoyed the resources available on this platform and it help fast track my learning.",
+            pic: "./review3.jpg",
+            name: "Ahmed Aliu",
+            workplace: "Alimosho Highschool"
+        },
+        {
+            shortDescription: "Efficient collaboration",
+            longDescription: "Studying with my friends has never been easier, this platform provided us a means to help each other grow and learn",
+            pic: "./review4.jpg",
+            name: "Olamide Korede",
+            workplace: "Queens Colledge"
+        }
+    ]
   return (
     <div className="bg-[#ecf0f2]">
     <div className="max-w-screen-xl mx-auto flex justify-between py-28">
         <div className="grid mb-8 border border-gray-200 rounded-lg shadow-sm md:mb-12 md:grid-cols-2 dark:bg-gray-800 gap-12">
-    <figure className="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-ss-lg md:border-e dark:bg-gray-800 dark:border-gray-700">
-        <blockquote className="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Very easy this was to integrate</h3>
-            <p className="my-4">If you care for your time, I hands down would go with this."</p>
-        </blockquote>
-        <figcaption className="flex items-center justify-center ">
-            <img className="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png" alt="profile picture" />
-            <div className="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
-                <div>Bonnie Green</div>
-                <div className="text-sm text-gray-500 dark:text-gray-400 ">Developer at Open AI</div>
-            </div>
-        </figcaption>    
-    </figure>
-    <figure className="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 md:rounded-se-lg dark:bg-gray-800 dark:border-gray-700">
-        <blockquote className="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Solid foundation for any project</h3>
-            <p className="my-4">Designing with Figma components that can be easily translated to the utility classNamees of Tailwind CSS is a huge timesaver!"</p>
-        </blockquote>
-        <figcaption className="flex items-center justify-center ">
-            <img className="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/roberta-casas.png" alt="profile picture" />
-            <div className="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
-                <div>Roberta Casas</div>
-                <div className="text-sm text-gray-500 dark:text-gray-400">Lead designer at Dropbox</div>
-            </div>
-        </figcaption>    
-    </figure>
-    <figure className="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 md:rounded-es-lg md:border-b-0 md:border-e dark:bg-gray-800 dark:border-gray-700">
-        <blockquote className="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Mindblowing workflow</h3>
-            <p className="my-4">Aesthetically, the well designed components are beautiful and will undoubtedly level up your next application."</p>
-        </blockquote>
-        <figcaption className="flex items-center justify-center ">
-            <img className="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png" alt="profile picture" />
-            <div className="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
-                <div>Jese Leos</div>
-                <div className="text-sm text-gray-500 dark:text-gray-400">Software Engineer at Facebook</div>
-            </div>
-        </figcaption>    
-    </figure>
-    <figure className="flex flex-col items-center justify-center p-8 text-center bg-white border-gray-200 rounded-b-lg md:rounded-se-lg dark:bg-gray-800 dark:border-gray-700">
-        <blockquote className="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Efficient Collaborating</h3>
-            <p className="my-4">You have many examples that can be used to create a fast prototype for your team."</p>
-        </blockquote>
-        <figcaption className="flex items-center justify-center ">
-            <img className="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/joseph-mcfall.png" alt="profile picture" />
-            <div className="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
-                <div>Joseph McFall</div>
-                <div className="text-sm text-gray-500 dark:text-gray-400">CTO at Google</div>
-            </div>
-        </figcaption>    
-    </figure>
-</div>
+        {
+            reviews.map((review, idx)=>(
+            <figure className="w-[550px] flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-ss-lg md:border-e dark:bg-gray-800 dark:border-gray-700" key={idx.toString()}>
+                <blockquote className="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{review.shortDescription}</h3>
+                    <p className="my-4">{review.longDescription}</p>
+                </blockquote>
+                <figcaption className="flex items-center justify-center ">
+                    <img className="rounded-full w-9 h-9" src={review.pic} alt="profile" />
+                    <div className="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
+                        <div>{review.name}</div>
+                        <div className="text-sm text-gray-500 dark:text-gray-400 ">{review.workplace}</div>
+                    </div>
+                </figcaption>    
+            </figure>
+            ))
+        }
+        </div>
     </div>
     </div>
   )
